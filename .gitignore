@@ -1,0 +1,17 @@
+# 依赖与构建产物
+node_modules/
+dist/
+build/
+*.log
+
+# 本地环境变量
+.env
+.env.local
+
+# 操作系统
+.DS_Store
+Thumbs.db
+
+# 仅作本地缓存，不纳入版本控制
+.idea/
+.vscode/

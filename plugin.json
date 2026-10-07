@@ -1,0 +1,29 @@
+{
+  "name": "paper-research-team",
+  "displayName": "论文研究专家团",
+  "version": "1.0.0",
+  "type": "expert-team",
+  "description": "面向学术研究的多智能体专家团 SkillHub：1 名研究总监 + 5 名领域专员，内置论文全流程、文献综述、论文评审三类工作流。成员构成由对主流科研协作方案的检索与收敛确定。",
+  "author": "fssk",
+  "category": "04-DataAI",
+  "categoryLabel": "数据智能",
+  "entry": "SKILL.md",
+  "members": [
+    { "id": "director", "name": "毕成稿", "role": "研究总监", "file": "agents/director.md" },
+    { "id": "literature", "name": "林阅川", "role": "文献综述研究员", "file": "agents/literature.md" },
+    { "id": "design", "name": "计方成", "role": "研究设计专家", "file": "agents/design.md" },
+    { "id": "analysis", "name": "舒析", "role": "数据分析专家", "file": "agents/analysis.md" },
+    { "id": "writing", "name": "朱执笔", "role": "学术写作专家", "file": "agents/writing.md" },
+    { "id": "review", "name": "顾平", "role": "同行评审专家", "file": "agents/review.md" }
+  ],
+  "workflows": [
+    { "id": "A", "name": "论文全流程", "stages": ["选题", "文献", "假设", "设计", "执行", "分析", "写作", "评审"], "entry": "director" },
+    { "id": "B", "name": "文献综述", "entry": "literature" },
+    { "id": "C", "name": "论文评审", "entry": "review" }
+  ],
+  "routing": {
+    "singleRole": true,
+    "description": "支持直接指定某名专员执行单点任务"
+  },
+  "license": "MIT"
+}
